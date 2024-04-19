@@ -14,11 +14,5 @@ const sequelize = new Sequelize(URI, {
 
 setupModels(sequelize);
 
-sequelize.sync({ force: false })
-  .then(() => {
-    console.log('Database sync');
-  });
-
-
 module.exports =  sequelize ;
 
