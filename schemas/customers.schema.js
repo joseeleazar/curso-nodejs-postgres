@@ -17,8 +17,10 @@ const createCustomerSchema = Joi.object({
   lastName: lastName.required(),
   phone: phone.required(),
   user: Joi.object({
+    name: name.required(),
     email: email.required(),
-    password: password.required()
+    password: password.required(),
+    role: Joi.string().valid('customer').required()
   })
 });
 
